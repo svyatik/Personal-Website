@@ -1,2 +1,2 @@
-# Personal-Website
+# Personal Website
 My new personal website
