@@ -1,0 +1,122 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#navbar {
+  height: 100%;
+  width: 100%;
+  .navbar-block {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    display: table;
+    background-position: center center;
+    background-size: auto 105%;
+    transition: all .5s;
+    transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+
+    &:nth-of-type(1) {
+      background-image: url('../img/cat.jpg');
+    }
+    &:nth-of-type(2) {
+      background-image: url('../img/coding.jpg');
+    }
+    &:nth-of-type(3) {
+      background-image: url('../img/cat_programmer.jpg');
+    }
+    &:nth-of-type(4) {
+      background-image: url('../img/contact.jpg');
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(45,45,45,.7);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all .5s;
+    }
+
+    &:hover {
+      background-size: auto 100%;
+    }
+
+    &:hover::before {
+      background-color: transparent;
+    }
+
+    .navbar-center {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+
+        .navbar-circle {
+          background-color: rgba(255,255,255,.08);
+          width: 75px;
+          height: 75px;
+          position: relative;
+          border-radius: 50%;
+          text-align: center;
+          display: inline-block;
+
+          i {
+            font-size: 42px;
+            color: white;
+            padding: 16px;
+          }
+
+          .navbar-circle-big {
+            width: 135px;
+            height: 135px;
+            background-color: rgba(255,255,255,.08);
+            position: absolute;
+            border-radius: 50%;
+            margin-top: -67.5px;
+            margin-left: -67.5px;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            transition: all .5s;
+
+            &.active {
+              opacity: 1;
+              width: 75px;
+              height: 75px;
+              top: 50%;
+              left: 50%;
+              margin-left: -37.5px;
+              margin-top: -37.5px;
+            }
+          } /* /.navbar-circle-big */
+        } /* /.navbar-circle */
+
+      .navbar-title {
+        text-transform: uppercase;
+        color: white;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .navbar-info {
+        font-style: italic;
+        color: #ddd;
+        position: relative;
+        opacity: 0;
+        transition: opacity .2s;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    } /* /.navbar-center */
+  } /* /.navbar-block */
+} /* /#navbar-block */

@@ -1,0 +1,24 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "My new personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svyatik/Personal-Website.git"
+  },
+  "author": "svyat <svyat.kovtun@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/svyatik/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/svyatik/Personal-Website#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^1.1.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
