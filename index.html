@@ -13,25 +13,33 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,300italic,400italic,500italic,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <script src="js/script.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="full-background"></div>
+
   <div id="navbar">
 
-    <div class="navbar-block">
+    <div class="navbar-block" id="profile_block">
+      <div class="navbar-background"></div>
       <div class="navbar-center">
         <span class="navbar-circle">
           <i class="fa fa-user"></i>
           <span class="navbar-circle-big"></span>
         </span> <!-- /.navbar-circle -->
         <h1 class="navbar-title">Profile</h1>
-        <p class="navbar-info">A Brief About Me</p>
+        <p class="navbar-info">A Brief About Me...</p>
       </div> <!-- /.navbar-center -->
     </div> <!-- /.navbar-block -->
 
-    <div class="navbar-block">
+    <div class="navbar-block" id="resume_block">
+      <div class="navbar-background"></div>
       <div class="navbar-center">
         <span class="navbar-circle">
           <i class="fa fa-file-text"></i>
@@ -42,7 +50,8 @@
       </div> <!-- /.navbar-center -->
     </div> <!-- /.navbar-block -->
 
-    <div class="navbar-block">
+    <div class="navbar-block" id="portfolio_block">
+      <div class="navbar-background"></div>
       <div class="navbar-center">
         <span class="navbar-circle">
           <i class="fa fa-briefcase"></i>
@@ -53,7 +62,8 @@
       </div> <!-- /.navbar-center -->
     </div> <!-- /.navbar-block -->
 
-    <div class="navbar-block">
+    <div class="navbar-block" id="contact_block">
+      <div class="navbar-background"></div>
       <div class="navbar-center">
         <span class="navbar-circle">
           <i class="fa fa-paper-plane"></i>
@@ -64,5 +74,103 @@
       </div> <!-- /.navbar-center -->
     </div> <!-- /.navbar-block -->
   </div> <!--/#navbar -->
+
+
+  <div class="wrapper">
+    <span class="close"></span>
+
+    <div class="container-fluid" id="profile">
+      <div class="row">
+
+        <div class="col-sm-6 profile-name">
+          <span class="avatar"></span>
+          <h1 class="profile-name-first">Svyat</h1>
+          <h1 class="profile-name-second">Kovtun</h1>
+          <h1 class="profile-name-text">The new, modern front-end developer</h1>
+        </div> <!-- /.profile-name -->
+        <div class="col-sm-6 profile-about">
+          <span class="profile-about-title">The modern front-end developer</span>
+          <span class="profile-about-desc">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            <br><br>
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          </span>
+        </div> <!-- /.profile-about -->
+      </div> <!-- /.row -->
+
+      <div class="row profile-offer">
+        <div class="shadow-div"></div>
+        <div class="col-sm-12">
+          <i class="fa fa-cogs profile-offer-icon"></i>
+          <p class="profile-offer-title">Lorem Ipsum Dolor Sit Amet</p>
+          <div class="container offer-container">
+            <div class="row">
+              <div class="col-sm-3 offer-item">
+                <i class="fa fa-code item-icon"></i>
+                <span class="item-title">HTML &amp; CSS</span>
+                <p class="item-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+              <div class="col-sm-3 offer-item">
+                <i class="fa fa-diamond item-icon"></i>
+                <span class="item-title">Great Design</span>
+                <p class="item-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+              <div class="col-sm-3 offer-item">
+                <i class="fa fa-wordpress item-icon"></i>
+                <span class="item-title">Wordpress</span>
+                <p class="item-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+              <div class="col-sm-3 offer-item">
+                <i class="fa fa-modx item-icon"></i>
+                <span class="item-title">Modern Developer</span>
+                <p class="item-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+            </div> <!-- /.row -->
+          </div> <!-- /.offer-container -->
+        </div> <!-- /.col-sm-12 -->
+      </div> <!-- /.profile-offer -->
+
+      <div class="row profile-facts">
+        <div class="col-sm-12">
+          <ul>
+            <li>
+              <h1 class="text-icon">10+</h1>
+              <span class="text-title">Happy Clients</span>
+            </li>
+            <li>
+              <h1 class="text-icon">
+                <i class="fa fa-camera-retro"></i>
+              </h1>
+              <span class="text-title">Photographer</span>
+            </li>
+            <li>
+              <h1 class="text-icon">25+</h1>
+              <span class="text-title">Projects done</span>
+            </li>
+            <li>
+              <h1 class="text-icon">
+                <i class="fa fa-motorcycle"></i>
+              </h1>
+              <span class="text-title">Motorcyclist</span>
+            </li>
+            <li>
+              <h1 class="text-icon">250+</h1>
+              <span class="text-title">Tea cups</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row copyright">
+        <span class="copyright-title">Svyatoslav Kovtun. Personal Website</span>
+        <span class="copyright-text">Copyright © 2015-2016</span>
+      </div>
+
+    </div> <!-- /#profile -->
+  </div> <!-- /.wrapper -->
 </body>
 </html>
