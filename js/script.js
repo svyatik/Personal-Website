@@ -28,26 +28,17 @@ $(document).ready(function() {
     });
 
     $('#profile_block').on('click', function() {
-
         setTimeout(function(){
-            // $('#profile').css('display')
             $('#profile').addClass('active');
         }, 500);
-        
+    });
+    $('#resume_block').on('click', function() {
+        setTimeout(function(){
+            $('#resume').addClass('active');
+        }, 500);
     });
 
     $('.close').on('click', function() {
-        /*$('.navbar-block').removeClass('active');
-        $('.navbar-block').find('.navbar-background').removeClass('active');
-        $('.navbar-block').addClass('is_loaded');
-        // 
-        setTimeout(function(){
-            // $('#profile').css('display')
-            
-
-
-        }, 500);*/
-        // $('.full-background').css('display', 'block');
         $('.full-background').addClass('active');
         $('.full-background').animate({
             opacity: 1
@@ -55,28 +46,25 @@ $(document).ready(function() {
         setTimeout(function(){
             $('.navbar-block').removeClass('is_loaded active');
             $('.navbar-block').find('.navbar-circle').removeClass('show_on_mobile');
-            
-            // $('.navbar-block').addClass('is_loaded');
-            
         }, 300);
 
         setTimeout(function() {
             $('.full-background').removeClass('active');
             $('.full-background').css('opacity', '0')
             $('#profile').removeClass('active');
+            $('#resume').removeClass('active');
             openMenu();
         }, 1000);
-        setTimeout(function() {
-            
-        }, 1500);
-       /* $('.full-background').animate({
-            opacity: 1
-        }, 200, function() {*/
-            // $('.full-background').css('display', 'none');
-            // $('.navbar-block').removeClass('is_loaded active');
-            // openMenu();
-        // });
+    });
 
+
+    $('.circle').circliful({
+        dimension: 165,
+        width: 38,
+        border: 'inline',
+        bordersize: 20,
+        fgcolor: '#404148',
+        bgcolor: '#fff'
     });
 });
 
