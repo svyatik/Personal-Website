@@ -1,3 +1,5 @@
+var slider = false, mixItUp = false;
+
 $(window).load(function() {
     // $('.navbar-block').addClass('is_loaded');
     openMenu();
@@ -37,6 +39,13 @@ $(document).ready(function() {
             $('#resume').addClass('active');
         }, 500);
     });
+    $('#portfolio_block').on('click', function() {
+        setTimeout(function(){
+            $('#portfolio').addClass('active');
+            initSlider();
+            initMixItUp();
+        }, 500);
+    });
 
     $('.close').on('click', function() {
         $('.full-background').addClass('active');
@@ -50,9 +59,11 @@ $(document).ready(function() {
 
         setTimeout(function() {
             $('.full-background').removeClass('active');
-            $('.full-background').css('opacity', '0')
+            $('.full-background').css('opacity', '0');
+
             $('#profile').removeClass('active');
             $('#resume').removeClass('active');
+            $('#portfolio').removeClass('active');
             openMenu();
         }, 1000);
     });
@@ -66,7 +77,43 @@ $(document).ready(function() {
         fgcolor: '#404148',
         bgcolor: '#fff'
     });
+
+    // $('#Container').mixItUp();
+    // console.log($("#Container"));
+    
+
+
+    // $('.portfolio-button').find('button').on('click', function () {
+    //     $('.portfolio-button').find('button').removeClass('active');
+    //     $(this).addClass('active');
+    // });
+
 });
+
+function initSlider() {
+    if(!slider) {
+        $("#lightSlider").lightSlider({
+            controls: false,
+            adaptiveHeight: true,
+            mode: "slide",
+            item: 1,
+            enableTouch: true,
+            enableDrag: true,
+            freeMove:true,
+        });
+        slider = true;
+    }
+}
+
+function initMixItUp() {
+    // on('#portfolio').ready(function() {
+        // console.log($(".portfolio-button"));
+        if(!mixItUp) {
+            $('#Container').mixItUp();
+            mixItUp = true;
+        }
+    // });
+}
 
 function openMenu() {
     $('#profile_block').addClass('is_loaded');

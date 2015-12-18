@@ -13,7 +13,12 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+  <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,300italic,400italic,500italic,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/lightslider.min.css">
+  <script src="js/lightslider.min.js"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -296,6 +301,148 @@
       </div>
 
     </div> <!-- /#resume -->
+
+
+    <div class="container-fluid" id="portfolio">
+      <div class="row portfolio">
+        <div class="container-fluid portfolio-container">
+          <div class="row">
+
+          <div class="col-sm-12 portfolio-button">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter=".landing">Landing</button>
+            <button class="filter" data-filter=".blog">Blog</button>
+          </div>
+          </div>
+
+            <div class="row" id="Container">
+              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix landing">
+                <a href="#" class="mix-cont">
+                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <div class="cont-desc">
+                    <h2>First Project</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix landing">
+                <a href="#" class="mix-cont">
+                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <div class="cont-desc">
+                    <h2>First Project</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix blog">
+                <a href="#" class="mix-cont">
+                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <div class="cont-desc">
+                    <h2>First Project</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix blog">
+                <a href="#" class="mix-cont">
+                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <div class="cont-desc">
+                    <h2>First Project</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix landing">
+                <a href="#" class="mix-cont">
+                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <div class="cont-desc">
+                    <h2>First Project</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                  </div>
+                </a>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix blog">
+                <a href="#" class="mix-cont">
+                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <div class="cont-desc">
+                    <h2>First Project</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+          <!-- </div> -->
+        </div>
+      </div>
+
+      <div class="row testimonials">
+        <div class="shadow-div"></div>
+        <div class="col-sm-12">
+          <span class="smiley"></span>
+          <h2 class="testimonials-title">Some of my happy clients</h2>
+
+          <div class="testimonials-sign">
+            <ul id="lightSlider">
+              <li>
+                <sup class="fa fa-quote-left"></sup>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <sub class="fa fa-quote-right"></sub>
+                <span class="author">— Josh Doe</span>
+              </li>
+              <li>
+                <sup class="fa fa-quote-left"></sup>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <sub class="fa fa-quote-right"></sub>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row profile-facts">
+        <div class="col-sm-12">
+          <ul>
+            <li>
+              <h1 class="text-icon">10+</h1>
+              <span class="text-title">Happy Clients</span>
+            </li>
+            <li>
+              <h1 class="text-icon">
+                <i class="fa fa-camera-retro"></i>
+              </h1>
+              <span class="text-title">Photographer</span>
+            </li>
+            <li>
+              <h1 class="text-icon">25+</h1>
+              <span class="text-title">Projects done</span>
+            </li>
+            <li>
+              <h1 class="text-icon">
+                <i class="fa fa-motorcycle"></i>
+              </h1>
+              <span class="text-title">Motorcyclist</span>
+            </li>
+            <li>
+              <h1 class="text-icon">250+</h1>
+              <span class="text-title">Tea cups</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row copyright">
+        <span class="copyright-title">Svyatoslav Kovtun. Personal Website</span>
+        <span class="copyright-text">Copyright © 2015-2016</span>
+      </div>
+
+    </div> <!-- /#portfolio -->
   </div> <!-- /.wrapper -->
 </body>
 </html>
