@@ -2,6 +2,11 @@ var slider = false, mixItUp = false;
 
 $(window).load(function() {
     // $('.navbar-block').addClass('is_loaded');
+    $('.preloader').animate({
+        opacity: 0
+    }, function() {
+        $('.preloader').css('display', 'none');
+    });
     openMenu();
 });
 
@@ -27,6 +32,7 @@ $(document).ready(function() {
         $(this).addClass('is_loaded active');
         $(this).find('.navbar-background').addClass('active');
         $(this).find('.navbar-circle').addClass('show_on_mobile');
+        $('.close').removeClass('off');
     });
 
     $('#profile_block').on('click', function() {
@@ -44,6 +50,13 @@ $(document).ready(function() {
             $('#portfolio').addClass('active');
             initSlider();
             initMixItUp();
+        }, 500);
+    });
+    $('#contact_block').on('click', function() {
+        setTimeout(function(){
+            $('#contact').addClass('active');
+            // google.maps.event.addDomListener(window, 'load', initialize);
+            initialize();
         }, 500);
     });
 
@@ -64,9 +77,16 @@ $(document).ready(function() {
             $('#profile').removeClass('active');
             $('#resume').removeClass('active');
             $('#portfolio').removeClass('active');
+            $('#contact').removeClass('active');
             openMenu();
         }, 1000);
+
+        $('.close').addClass('off');
     });
+
+    // $('.soc-circle').on('mouseenter', function() {
+    //     $(this).find('.soc-circle-big').addClass('active');
+    // });
 
 
     $('.circle').circliful({
@@ -87,7 +107,28 @@ $(document).ready(function() {
     //     $('.portfolio-button').find('button').removeClass('active');
     //     $(this).addClass('active');
     // });
+    // 
+    // google.maps.event.addDomListener(window, 'load', initialize);
+    function initialize() {
+    var myLatLng = {lat: 49.841774, lng: 24.031686};
 
+    var mapCanvas = document.getElementById('map');
+    var mapOptions = {
+      center: new google.maps.LatLng(49.841774, 24.031686),
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+
+
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+
+    var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+  }
 });
 
 function initSlider() {

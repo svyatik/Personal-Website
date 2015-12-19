@@ -17,6 +17,8 @@
 
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,300italic,400italic,500italic,700italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+
   <link rel="stylesheet" href="css/lightslider.min.css">
   <script src="js/lightslider.min.js"></script>
 
@@ -25,11 +27,17 @@
   <link href="css/jquery.circliful.css" rel="stylesheet">
   <script src="js/jquery.circliful.min.js"></script>
 
+  <link rel="stylesheet" href="css/loaders.min.css">
+
   <script src="js/script.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="preloader">
+    <!-- <div class="balls"></div> -->
+  </div>
+
   <div class="full-background"></div>
 
   <div id="navbar">
@@ -85,7 +93,7 @@
 
 
   <div class="wrapper">
-    <span class="close"></span>
+    <span class="close off"></span>
 
     <div class="container-fluid" id="profile">
       <div class="row">
@@ -99,9 +107,9 @@
         <div class="col-sm-6 profile-about">
           <span class="profile-about-title">The modern front-end developer</span>
           <span class="profile-about-desc">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pellentesque a leo vitae commodo. Pellentesque cursus at lorem vitae volutpat. Nam placerat tellus et dolor ultricies, ut cursus sem mollis.
             <br><br>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+             Sed ac efficitur ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque venenatis posuere orci, in rutrum sem pretium sed. Donec cursus metus vel justo vehicula dictum.
           </span>
         </div> <!-- /.profile-about -->
       </div> <!-- /.row -->
@@ -110,31 +118,31 @@
         <div class="shadow-div"></div>
         <div class="col-sm-12">
           <i class="fa fa-cogs profile-offer-icon"></i>
-          <p class="profile-offer-title">Lorem Ipsum Dolor Sit Amet</p>
+          <p class="profile-offer-title">Кілька Моїх Особливестей</p>
           <div class="container offer-container">
             <div class="row">
               <div class="col-sm-3 offer-item">
                 <i class="fa fa-code item-icon"></i>
                 <span class="item-title">HTML &amp; CSS</span>
-                <p class="item-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="item-desc">Слідую семантичній верстці HTML5 та стилізую за допомогою CSS3. Додатково використовую LESS, мініфікую файли та зображення.</p>
               </div>
 
               <div class="col-sm-3 offer-item">
                 <i class="fa fa-diamond item-icon"></i>
                 <span class="item-title">Great Design</span>
-                <p class="item-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="item-desc">Нагамаюся слідувати сучасним тенденціям у дизайні та проявляти креативність. Втілюю ідеї у Photoshop, Illustrator, Gimp та Inkscape</p>
               </div>
 
               <div class="col-sm-3 offer-item">
                 <i class="fa fa-wordpress item-icon"></i>
                 <span class="item-title">Wordpress</span>
-                <p class="item-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="item-desc">У ньому є все, що мені потрібно. Якщо у ньому немає того, що мені потрібно, я пишу плагін і тоді у мене є все, що потрібно :)</p>
               </div>
 
               <div class="col-sm-3 offer-item">
                 <i class="fa fa-modx item-icon"></i>
                 <span class="item-title">Modern Developer</span>
-                <p class="item-desc">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="item-desc">У своїй роботі стараюся та прагну використовувати лише самі сучасні та новітні технології у світі веб.</p>
               </div>
 
             </div> <!-- /.row -->
@@ -316,57 +324,57 @@
           </div>
 
             <div class="row" id="Container">
-              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix landing">
+              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix blog">
                 <a href="#" class="mix-cont">
-                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <img src="img/portfolio/rebecca.png" alt>
                   <div class="cont-desc">
-                    <h2>First Project</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <h2>Rebecca</h2>
+                    <p>Дизайн сторінки по продажу та оренді квартир. Власний дизайн. Адаптивність. Це мій перший проект.</p>
                   </div>
                 </a>
               </div>
               
               <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix landing">
                 <a href="#" class="mix-cont">
-                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <img src="img/portfolio/it-soul.png" alt>
                   <div class="cont-desc">
-                    <h2>First Project</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <h2>It-SOUL</h2>
+                    <p>Сучасний сайт в стилі лендін. Дизайн власний. Адаптивність. Анімація та паралакс ефекти.</p>
                   </div>
                 </a>
               </div>
 
               <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix blog">
                 <a href="#" class="mix-cont">
-                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <img src="img/portfolio/wedstories.png" alt>
                   <div class="cont-desc">
-                    <h2>First Project</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                  </div>
-                </a>
-              </div>
-
-              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix blog">
-                <a href="#" class="mix-cont">
-                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
-                  <div class="cont-desc">
-                    <h2>First Project</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <h2>Wedstories</h2>
+                    <p>Офіційний сайт-портфоліо для фотографа. Базується на блозі зі слайдерами. Вміст редагуєтья у WordPress. Адаптивний.</p>
                   </div>
                 </a>
               </div>
 
               <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix landing">
                 <a href="#" class="mix-cont">
-                  <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
+                  <img src="img/portfolio/indelio.png" alt>
                   <div class="cont-desc">
-                    <h2>First Project</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <h2>InDeLIO</h2>
+                    <p>Виконаний в стилі лендінга з сучасним, власним дизайном. Адаптивний.</p>
                   </div>
                 </a>
               </div>
 
-              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix blog">
+              <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix landing">
+                <a href="#" class="mix-cont">
+                  <img src="img/portfolio/svyat_tk.png" alt>
+                  <div class="cont-desc">
+                    <h2>Svyat.tk</h2>
+                    <p>Мій перший сайт-портфоліо у стилі лендінг. Пишаюся власним дизайном. Присутня адаптивність та анімація.</p>
+                  </div>
+                </a>
+              </div>
+
+              <!-- <div class="col-sm-6 col-md-6 col-xs-12 col-lg-4 mix blog">
                 <a href="#" class="mix-cont">
                   <img src="http://codetic.net/demo/templates/Privado/img/portfolio/thumb/p-1.jpg" alt="">
                   <div class="cont-desc">
@@ -374,7 +382,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                   </div>
                 </a>
-              </div>
+              </div> -->
             </div>
 
           <!-- </div> -->
@@ -443,6 +451,89 @@
       </div>
 
     </div> <!-- /#portfolio -->
+
+
+    <div class="container-fluid" id="contact">
+      <div class="row contact-feel">
+        <i class="contact-icon fa fa-envelope"></i>
+        <h1 class="contact-title">Drop me a line</h1>
+
+        <div class="shadow-div"></div>
+        <div class="container">
+          <div class="row contact-form">
+            <!-- <div class="col-sm-12"> -->
+              <form action="sendmail.php">
+                <input type="text" placeholder="Name_">
+                <input type="email" placeholder="Email_">
+                <textarea placeholder="Message_"></textarea>
+                <button>Send ></button>
+              </form>
+            <!-- </div> /.col-sm-12 -->
+          </div> <!-- /.row /.contact-form -->
+        </div> <!-- /.container -->
+      </div> <!-- /.row /.contact-feel -->
+
+      <div class="row contact-map">
+        <div class="col-sm-6 contact-map-left">
+
+          <ul class="list-enth">
+            <li>
+              <i class="fa fa-map"></i>
+              <span>L'viv, Ukraine</span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i>
+              <span>+38 (098) 078 41 28</span>
+            </li>
+            <li>
+              <i class="fa fa-paper-plane"></i>
+              <span>svyat.kovtun@gmail.com</span>
+            </li>
+          </ul>
+
+          <ul class="list-socmedia">
+            <li>
+              <span class="soc-circle">
+                <i class="fa fa-facebook"></i>
+              </span> <!-- /.navbar-circle -->
+            </li>
+
+            <li>
+              <span class="soc-circle">
+                <i class="fa fa-google-plus"></i>
+              </span> <!-- /.navbar-circle -->
+            </li>
+
+            <li>
+              <span class="soc-circle">
+                <i class="fa fa-vk"></i>
+              </span> <!-- /.navbar-circle -->
+            </li>
+
+            <li>
+              <span class="soc-circle">
+                <i class="fa fa-github"></i>
+              </span> <!-- /.navbar-circle -->
+            </li>
+
+            <li>
+              <span class="soc-circle">
+                <i class="fa fa-skype"></i>
+              </span> <!-- /.navbar-circle -->
+            </li>
+
+          </ul>
+        </div>
+        <div class="col-sm-6 contact-map-right" id="map"></div>
+      </div>
+
+      <div class="row copyright">
+        <span class="copyright-title">Svyatoslav Kovtun. Personal Website</span>
+        <span class="copyright-text">Copyright © 2015-2016</span>
+      </div>
+
+    </div> <!-- /#contact -->
+
   </div> <!-- /.wrapper -->
 </body>
 </html>
