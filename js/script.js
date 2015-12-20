@@ -84,8 +84,6 @@ $(document).ready(function() {
 
         $('.close').addClass('off');
         $('.scroll-button').removeClass('is_loaded');
-<<<<<<< HEAD
-=======
     }
 
     $('.close').on('click', function() {
@@ -95,7 +93,6 @@ $(document).ready(function() {
     $(document).keydown(function(e) {
         if(e.keyCode === 27)
             closePage();
->>>>>>> master
     });
 
     // $('.soc-circle').on('mouseenter', function() {
@@ -118,10 +115,6 @@ $(document).ready(function() {
         var var_static = $('.navbar-block').height()/3;
         
         var x = (100-(y*100/var_static))/100;
-<<<<<<< HEAD
-        console.log(x);
-=======
->>>>>>> master
 
         $('.navbar-circle').css('opacity', x);
         $('.navbar-title').css('opacity', x);
