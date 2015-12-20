@@ -242,6 +242,42 @@ body {
         }
       }
     } /* /.navbar-center */
+    .scroll-button {
+      width: 44px;
+      height: 44px;
+      position: absolute;
+      bottom: 25px;
+      opacity: .8;
+      left: 50%;
+      margin-left: -22px;
+      background-image: url('http://codetic.net/demo/templates/Privado/img/icons/icon-arrow-desktop.svg');
+      animation-iteration-count: infinite;
+      animation-duration: 1s;
+      visibility: hidden;
+      transition: opacity .2s;
+
+      &.is_loaded {
+        visibility: visible;
+        animation-name: button_animation;
+      }
+
+      &:hover {
+        opacity: 1;
+        animation-play-state: paused;
+      }
+    }
+
+    @keyframes button_animation {
+      from {
+        bottom: 30px;
+      }
+      50% {
+        bottom: 25px;
+      }
+      to {
+        bottom: 30px;
+      }
+    }
   } /* /.navbar-block */
 
   @media screen and (max-width: 769px) {
@@ -268,6 +304,10 @@ body {
       }
       .navbar-circle.show_on_mobile {
         display: inline-block !important;
+      }
+
+      .navbar-title {
+        font-size: 24px;
       }
     }
   }
@@ -321,7 +361,7 @@ body {
       height: 600px;
       /*padding: 100px 50px;*/
       padding-top: 100px;
-      padding-left: 200px;
+      padding-left: 10%;
 
       .avatar {
         width: 128px;
@@ -608,6 +648,63 @@ body {
           }
         }
       }
+
+      @media (max-width: 500px) {
+        .education,
+        .employment {
+          padding-left: 15px;
+          padding-right: 15px;
+
+          h2 {
+            font-size: 14px;
+          }
+
+          .edu-list,
+          .emp-list {
+            li {
+              h3 {
+                font-size: 15px;
+              }
+              p {
+              padding-left: 0;
+              padding-right: 0;
+              font-size: 12px;
+            }
+
+            }
+          }
+        }
+      }
+
+      @media (max-width: 500px) {
+        .education,
+        .employment {
+          /*padding-left: 15px;
+          padding-right: 15px;
+*/
+          h2 {
+            font-size: 12px;
+          }
+
+          .edu-list,
+          .emp-list {
+            li {
+              h3 {
+                font-size: 14px;
+              }
+              h4 {
+                font-size: 13px;
+              }
+              p {
+              padding-left: 0;
+              padding-right: 0;
+              font-size: 11px;
+            }
+
+            }
+          }
+        }
+      }
     } /* /.edu-emp */
 
     .skills {
@@ -660,6 +757,13 @@ body {
         }
       }
 
+      @media (max-width: 770px) {
+        .features-left {
+          height: auto;
+          padding: 15px;
+        }
+      }
+
       .features-right {
         height: 500px;
         background-color: #F9F9F9;
@@ -703,6 +807,17 @@ body {
             font-weight: 300;
             font-size: 1.2em;
             margin-top: 10px;
+          }
+        }
+      }
+
+      @media (max-width: 770px) {
+        .features-right {
+          height: auto;
+          padding: 30px 15px;
+
+          ul {
+            padding: 0;
           }
         }
       }
@@ -856,6 +971,24 @@ body {
                   }
                 }
               }
+
+              @media (max-width: 500px) {
+                img {
+                  transform: translate3d(0,0,0);
+                  opacity: 0.6;
+                }
+                .cont-desc {
+                  padding: 0;
+                  h2 {
+                    margin-top: 25px;
+                  }
+                  p {
+                    margin-left: 25px;
+                    opacity: 1;
+                  }
+                }
+              }
+
             }
           }
         }
@@ -1332,21 +1465,58 @@ body {
       .profile-facts {
         ul {
           padding: 0;
+
+          .text-icon {
+            font-size: 2em;
+          }
+          .text-title {
+            font-size: 10px;
+          }
         }
       }
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 450px) {
       .profile-facts {
         .col-sm-12 {
           padding: 0;
           ul {
             padding: 0;
-            .text-icon {
-              font-size: 2em;
+            li {
+              padding: 0;
+              padding-bottom: 5px;
+            
+
+              .text-icon {
+                font-size: 1.4em;
+                margin-top: 5px;
+              }
+              .text-title {
+                font-size: 8px;
+              }
             }
-            .text-title {
-              font-size: 10px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 340px) {
+      .profile-facts {
+        .col-sm-12 {
+          padding: 0;
+          ul {
+            padding: 0;
+            li {
+              padding: 0;
+              padding-bottom: 5px;
+              .text-icon {
+                font-size: 1em;
+                margin-top: 5px;
+                margin-bottom: 5px;
+              }
+              .text-title {
+                font-size: 6px;
+              }
             }
           }
         }

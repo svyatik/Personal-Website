@@ -33,6 +33,7 @@ $(document).ready(function() {
         $(this).find('.navbar-background').addClass('active');
         $(this).find('.navbar-circle').addClass('show_on_mobile');
         $('.close').removeClass('off');
+        $('.scroll-button').addClass('is_loaded');
     });
 
     $('#profile_block').on('click', function() {
@@ -82,6 +83,7 @@ $(document).ready(function() {
         }, 1000);
 
         $('.close').addClass('off');
+        $('.scroll-button').removeClass('is_loaded');
     });
 
     // $('.soc-circle').on('mouseenter', function() {
@@ -98,10 +100,35 @@ $(document).ready(function() {
         bgcolor: '#fff'
     });
 
+
+    $(document).scroll(function() {
+        var y = $('body').scrollTop();
+        var var_static = $('.navbar-block').height()/3;
+        
+        var x = (100-(y*100/var_static))/100;
+        console.log(x);
+
+        $('.navbar-circle').css('opacity', x);
+        $('.navbar-title').css('opacity', x);
+        $('.navbar-info').css('opacity', x);
+        $('.scroll-button').css('opacity', x);
+    });
+
     // $('#Container').mixItUp();
     // console.log($("#Container"));
     
-
+$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 500);
+        return false;
+      }
+    }
+  });
 
     // $('.portfolio-button').find('button').on('click', function () {
     //     $('.portfolio-button').find('button').removeClass('active');

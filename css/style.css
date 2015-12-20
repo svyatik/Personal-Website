@@ -268,6 +268,54 @@ body {
 #navbar .navbar-block .navbar-center .navbar-info.active {
   opacity: 1;
 }
+#navbar .navbar-block .scroll-button {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 25px;
+  opacity: .8;
+  left: 50%;
+  margin-left: -22px;
+  background-image: url('http://codetic.net/demo/templates/Privado/img/icons/icon-arrow-desktop.svg');
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  visibility: hidden;
+  transition: opacity .2s;
+}
+#navbar .navbar-block .scroll-button.is_loaded {
+  visibility: visible;
+  -webkit-animation-name: button_animation;
+          animation-name: button_animation;
+}
+#navbar .navbar-block .scroll-button:hover {
+  opacity: 1;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@-webkit-keyframes button_animation {
+  from {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 25px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
+@keyframes button_animation {
+  from {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 25px;
+  }
+  to {
+    bottom: 30px;
+  }
+}
 @media screen and (max-width: 769px) {
   #navbar .navbar-block {
     width: 100%;
@@ -291,6 +339,9 @@ body {
   }
   #navbar .navbar-block .navbar-circle.show_on_mobile {
     display: inline-block !important;
+  }
+  #navbar .navbar-block .navbar-title {
+    font-size: 24px;
   }
 }
 /* /#navbar-block */
@@ -346,7 +397,7 @@ body {
   height: 600px;
   /*padding: 100px 50px;*/
   padding-top: 100px;
-  padding-left: 200px;
+  padding-left: 10%;
 }
 .wrapper #profile .profile-name .avatar {
   width: 128px;
@@ -606,6 +657,63 @@ body {
     padding-right: 0;
   }
 }
+@media (max-width: 500px) {
+  .wrapper #resume .edu_emp .education,
+  .wrapper #resume .edu_emp .employment {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .wrapper #resume .edu_emp .education h2,
+  .wrapper #resume .edu_emp .employment h2 {
+    font-size: 14px;
+  }
+  .wrapper #resume .edu_emp .education .edu-list li h3,
+  .wrapper #resume .edu_emp .employment .edu-list li h3,
+  .wrapper #resume .edu_emp .education .emp-list li h3,
+  .wrapper #resume .edu_emp .employment .emp-list li h3 {
+    font-size: 15px;
+  }
+  .wrapper #resume .edu_emp .education .edu-list li p,
+  .wrapper #resume .edu_emp .employment .edu-list li p,
+  .wrapper #resume .edu_emp .education .emp-list li p,
+  .wrapper #resume .edu_emp .employment .emp-list li p {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper #resume .edu_emp .education,
+  .wrapper #resume .edu_emp .employment {
+    /*padding-left: 15px;
+          padding-right: 15px;
+*/
+  }
+  .wrapper #resume .edu_emp .education h2,
+  .wrapper #resume .edu_emp .employment h2 {
+    font-size: 12px;
+  }
+  .wrapper #resume .edu_emp .education .edu-list li h3,
+  .wrapper #resume .edu_emp .employment .edu-list li h3,
+  .wrapper #resume .edu_emp .education .emp-list li h3,
+  .wrapper #resume .edu_emp .employment .emp-list li h3 {
+    font-size: 14px;
+  }
+  .wrapper #resume .edu_emp .education .edu-list li h4,
+  .wrapper #resume .edu_emp .employment .edu-list li h4,
+  .wrapper #resume .edu_emp .education .emp-list li h4,
+  .wrapper #resume .edu_emp .employment .emp-list li h4 {
+    font-size: 13px;
+  }
+  .wrapper #resume .edu_emp .education .edu-list li p,
+  .wrapper #resume .edu_emp .employment .edu-list li p,
+  .wrapper #resume .edu_emp .education .emp-list li p,
+  .wrapper #resume .edu_emp .employment .emp-list li p {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 11px;
+  }
+}
 .wrapper #resume .skills {
   background-color: #0ED4C8;
   padding-top: 75px;
@@ -648,6 +756,12 @@ body {
 .wrapper #resume .features .features-left h1 {
   margin-bottom: 35px;
 }
+@media (max-width: 770px) {
+  .wrapper #resume .features .features-left {
+    height: auto;
+    padding: 15px;
+  }
+}
 .wrapper #resume .features .features-right {
   height: 500px;
   background-color: #F9F9F9;
@@ -687,6 +801,15 @@ body {
   font-weight: 300;
   font-size: 1.2em;
   margin-top: 10px;
+}
+@media (max-width: 770px) {
+  .wrapper #resume .features .features-right {
+    height: auto;
+    padding: 30px 15px;
+  }
+  .wrapper #resume .features .features-right ul {
+    padding: 0;
+  }
 }
 .wrapper #portfolio {
   display: none;
@@ -834,6 +957,23 @@ body {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
     opacity: 0.6;
+  }
+  .wrapper #portfolio .portfolio .portfolio-container #Container .mix .mix-cont .cont-desc p {
+    margin-left: 25px;
+    opacity: 1;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper #portfolio .portfolio .portfolio-container #Container .mix .mix-cont img {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 0.6;
+  }
+  .wrapper #portfolio .portfolio .portfolio-container #Container .mix .mix-cont .cont-desc {
+    padding: 0;
+  }
+  .wrapper #portfolio .portfolio .portfolio-container #Container .mix .mix-cont .cont-desc h2 {
+    margin-top: 25px;
   }
   .wrapper #portfolio .portfolio .portfolio-container #Container .mix .mix-cont .cont-desc p {
     margin-left: 25px;
@@ -1207,19 +1347,50 @@ body {
   .wrapper .profile-facts ul {
     padding: 0;
   }
+  .wrapper .profile-facts ul .text-icon {
+    font-size: 2em;
+  }
+  .wrapper .profile-facts ul .text-title {
+    font-size: 10px;
+  }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 450px) {
   .wrapper .profile-facts .col-sm-12 {
     padding: 0;
   }
   .wrapper .profile-facts .col-sm-12 ul {
     padding: 0;
   }
-  .wrapper .profile-facts .col-sm-12 ul .text-icon {
-    font-size: 2em;
+  .wrapper .profile-facts .col-sm-12 ul li {
+    padding: 0;
+    padding-bottom: 5px;
   }
-  .wrapper .profile-facts .col-sm-12 ul .text-title {
-    font-size: 10px;
+  .wrapper .profile-facts .col-sm-12 ul li .text-icon {
+    font-size: 1.4em;
+    margin-top: 5px;
+  }
+  .wrapper .profile-facts .col-sm-12 ul li .text-title {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .wrapper .profile-facts .col-sm-12 {
+    padding: 0;
+  }
+  .wrapper .profile-facts .col-sm-12 ul {
+    padding: 0;
+  }
+  .wrapper .profile-facts .col-sm-12 ul li {
+    padding: 0;
+    padding-bottom: 5px;
+  }
+  .wrapper .profile-facts .col-sm-12 ul li .text-icon {
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .wrapper .profile-facts .col-sm-12 ul li .text-title {
+    font-size: 6px;
   }
 }
 /* /.wrapper */
